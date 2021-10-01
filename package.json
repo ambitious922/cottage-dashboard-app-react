@@ -1,0 +1,107 @@
+{
+  "name": "cottage-dashboard-web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/react": "^1.6.4",
+    "@craco/craco": "^6.1.2",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@fontsource/inter": "^4.4.5",
+    "@headlessui/react": "^1.4.1",
+    "@heroicons/react": "^1.0.1",
+    "@stripe/react-stripe-js": "^1.4.1",
+    "@stripe/stripe-js": "^1.16.0",
+    "@tailwindcss/forms": "^0.3.3",
+    "@testing-library/jest-dom": "^5.13.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/amplify": "^1.1.24",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^12.20.14",
+    "@types/react": "^17.0.9",
+    "@types/react-dom": "^17.0.6",
+    "@types/react-router": "^5.1.15",
+    "@types/react-router-dom": "^5.1.7",
+    "aws-amplify": "^4.1.0",
+    "aws-amplify-react": "^5.0.8",
+    "chart.js": "^3.5.1",
+    "dotenv": "^8.2.0",
+    "formik": "^2.2.9",
+    "framer-motion": "^4.1.17",
+    "luxon": "^2.0.1",
+    "react": "^17.0.2",
+    "react-chartjs-2": "^3.0.4",
+    "react-code-input": "^3.10.1",
+    "react-dom": "^17.0.2",
+    "react-geocode": "^0.2.3",
+    "react-google-autocomplete": "^2.4.0",
+    "react-hook-form": "^7.12.2",
+    "react-image-crop": "^9.0.2",
+    "react-load-script": "0.0.6",
+    "react-number-format": "^4.7.3",
+    "react-phone-number-input": "^3.1.25",
+    "react-query": "^3.16.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.3.2",
+    "uuid": "^7.0.3",
+    "web-vitals": "^1.1.2",
+    "yup": "^0.32.9"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "prepare": "husky install",
+    "codegen": "npx apollo service:download --endpoint=http://localhost:4001/graphql schema.json && amplify codegen",
+    "prettier": "prettier --write src/**/*.{js,jsx,ts,tsx,css}"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/luxon": "^1.27.1",
+    "@types/react-geocode": "^0.2.0",
+    "@types/react-phone-number-input": "^3.0.10",
+    "@types/uuid": "^8.3.1",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "autoprefixer": "^9.8.6",
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "postcss": "^7.0.36",
+    "prettier": "^2.3.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.4"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ],
+    "*.js": "eslint --cache --fix",
+    "*.{js,ts,tsx,jsx,css,md}": "prettier --write"
+  }
+}

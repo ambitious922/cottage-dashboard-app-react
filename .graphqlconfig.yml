@@ -1,0 +1,20 @@
+projects:
+  Codegen Project:
+    schemaPath: schema.json
+    includes:
+      - src/api/**/*.ts
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: typescript
+        generatedFileName: src/API.ts
+        docsFilePath: src/api
+        region: us-east-1
+        apiId: null
+        frontend: javascript
+        framework: react
+        maxDepth: 5
+extensions:
+  amplify:
+    version: 3
